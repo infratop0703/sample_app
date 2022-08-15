@@ -14,11 +14,12 @@ class ListsController < ApplicationController
   end
 
   def index
-    #listテーブルに保存されている全てのデータを取得→取得データは@list(インスタンス変数)に
+    #listテーブルに保存されている全てのデータを取得→取得データは@list(インスタンス変数)に格納
     @lists = List.all
   end
 
   def show
+    @list = List.find(params[:id])
   end
 
   def edit
