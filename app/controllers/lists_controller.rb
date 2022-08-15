@@ -9,8 +9,8 @@ class ListsController < ApplicationController
     list = List.new(list_params)
     #データをデータベースに保存（Saveメソッド）
     list.save
-    #トップ画面へリダイレクト
-    redirect_to '/top'
+    #詳細画面へリダイレクト
+    redirect_to list_path(list.id)
   end
 
   def index
@@ -30,5 +30,5 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:title, :body)
   end
-  
+
 end

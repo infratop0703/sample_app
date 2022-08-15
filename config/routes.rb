@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   post 'lists' => 'lists#create'
   get 'lists' => 'lists#index'
   # list毎の詳細画面
-  get 'list/:id' => 'lists#show'
+  get 'list/:id' => 'lists#show', as: "list" #'lists#showの設定をlistとして'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
