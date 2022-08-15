@@ -5,9 +5,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    #データ受け取り&新規登録のインスタンス作成
     @list = List.new(list_params)
-    #データをデータベースに保存（Saveメソッド）
     if @list.save
       redirect_to list_path(@list.id)
     else
