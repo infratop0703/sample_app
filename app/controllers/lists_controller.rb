@@ -25,6 +25,12 @@ class ListsController < ApplicationController
   def edit
     @list = List.find(params[:id])
   end
+  
+  def update
+    list = List.find(params[:id])
+    list.update(list_params)
+    redirect_to list_path(list.id)
+  end
 
   private
   #ストロングパラメータ(データ保護のセキュリティ強化)#「ここから下はこのcontrollerの中でしか呼び出せません」
