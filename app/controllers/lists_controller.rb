@@ -35,7 +35,7 @@ class ListsController < ApplicationController
   private
   #ストロングパラメータ(データ保護のセキュリティ強化)#「ここから下はこのcontrollerの中でしか呼び出せません」
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 
 end
