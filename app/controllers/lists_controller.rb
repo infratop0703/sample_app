@@ -14,6 +14,8 @@ class ListsController < ApplicationController
   end
 
   def index
+    #listテーブルに保存されている全てのデータを取得→取得データは@list(インスタンス変数)に
+    @lists = List.all
   end
 
   def show

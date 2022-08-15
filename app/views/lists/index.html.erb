@@ -1,2 +1,9 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<h1>投稿一覧</h1>
+<!--Listレコードの数だけ繰り返し処理(each)-->
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <!--「＝」を付けるのは実際にHTMLとして表示したいものだけ-->
+  <span><%= list.title %></span>
+
+<% end %>
